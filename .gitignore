@@ -1,0 +1,7 @@
+credentials.json
+token.pickle
+__pycache__
+.idea
+.ipynb_checkpoints
+ga-venv
+dependencies
