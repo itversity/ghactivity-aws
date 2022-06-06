@@ -11,14 +11,13 @@ def get_job_details(job_name):
 
 
 def get_next_file_name(job_details):
-    job_start_time = int(time.mktime(dt.now().timetuple()))
     job_run_bookmark_details = job_details.get('job_run_bookmark_details')
     if job_run_bookmark_details:
         dt_part = job_run_bookmark_details['last_run_file_name'].split('.')[0].split('/')[-1]
         next_file_name = f"{dt.strftime(dt.strptime(dt_part, '%Y-%m-%d-%H') + td(hours=1), '%Y-%m-%d-%-H')}.json.gz"
     else:
         next_file_name = f'{dt.strftime(dt.now().date() - td(days=3), "%Y-%m-%d")}-0.json.gz'
-    return job_start_time, next_file_name
+    return next_file_name
 
 
 def save_job_run_details(job_details, job_run_details, job_start_time):
