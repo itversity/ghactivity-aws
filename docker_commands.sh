@@ -1,15 +1,15 @@
 # Build custom docker image using lambda as base image
-docker build -t ghactivity-ingestor .
+docker build -t ghactivity-aws .
 
 # Start docker container with custom image
 docker run \
-  --name ghactivity-ingestor \
+  --name ghactivity-aws \
   -v /Users/itversity/.aws:/root/.aws \
   -p 9000:8080 \
   -e BUCKET_NAME=itversitydata \
   -e TARGET_FOLDER=raw \
   -d \
-  ghactivity-ingestor
+  ghactivity-aws
 
 # Validate docker image for lambda function locally
 curl -XPOST \
@@ -25,8 +25,8 @@ aws ecr get-login-password \
   582845781536.dkr.ecr.us-east-1.amazonaws.com
 
 # Tag docker image to make it ready to push to AWS ECR
-docker tag ghactivity-ingestor:latest \
-  582845781536.dkr.ecr.us-east-1.amazonaws.com/ghactivity-ingestor:latest
+docker tag ghactivity-aws:latest \
+  582845781536.dkr.ecr.us-east-1.amazonaws.com/ghactivity-aws:latest
 
 # Push custom docker image to AWS ECR
-docker push 582845781536.dkr.ecr.us-east-1.amazonaws.com/ghactivity-ingestor:latest
+docker push 582845781536.dkr.ecr.us-east-1.amazonaws.com/ghactivity-aws:latest
