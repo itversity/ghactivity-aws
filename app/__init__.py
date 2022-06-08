@@ -1,6 +1,7 @@
 import os
 import time
 from datetime import datetime as dt
+
 from util.bookmark import save_job_run_details, get_job_details, get_next_file_name
 from ghactivity_ingest import upload_file_to_s3
 from ghactivity_transform import transform_to_parquet
@@ -43,6 +44,21 @@ def ghactivity_transform_to_parquet(file_name):
 def lambda_transformer(event, context):
     file_name = event['jobRunDetails']['last_run_file_name']
     job_run_details = ghactivity_transform_to_parquet(file_name)
+    return {
+        'statusCode': 200,
+        'body': 'File Ingested Successfully',
+        'jobRunDetails': job_run_details
+    }
+
+
+def lambda_ingestor_step(event, context):
+    bucket_name = os.environ.get('BUCKET_NAME')
+    folder = os.environ.get('FOLDER')
+    job_details = event['Item']
+    print(f'Job Details: {job_details}')
+    next_file = get_next_file_name(job_details)
+    print(f'File to be ingested: {next_file}')
+    job_run_details = upload_file_to_s3(next_file, bucket_name, folder)
     return {
         'statusCode': 200,
         'body': 'File Ingested Successfully',
