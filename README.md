@@ -1,5 +1,10 @@
-# ghactivity-aws
-End to End Pipeline using AWS Services such as s3, boto3, lambda, ECR, step functions, Dynamodb, Step Functions, etc.
+# Mastering AWS Lambda Functions
+End to End Pipeline using AWS Services such as s3, boto3, lambda, ECR, step functions, Dynamodb, Step Functions, etc. This repository is related to our course in different platforms such as Udemy and ITVersity.
+
+Here are the instructions to setup this repository while taking the course:
+* Clone this repository
+* Use Notebooks to explore APIs and Core logic. All the notebooks are available under folder called as Notebooks.
+* You can also used commands in shell scripts for your reference while performing tasks such as building docker image, pushing to ECR, etc.
 
 Do you want to learn AWS Lambda Functions by building an **end-to-end data pipeline using Python and other key AWS Services such as Boto3, S3, Dynamodb, ECR, Cloudwatch, Glue Catalog, Athena**, etc? Here is one course using which you will learn AWS Lambda Functions by implementing an end-to-end pipeline by using all the services mentioned.
 
