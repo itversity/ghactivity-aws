@@ -6,4 +6,4 @@ RUN pip install -r requirements.txt
 COPY app ${LAMBDA_TASK_ROOT}/app
 ENV PYTHONPATH=${LAMBDA_TASK_ROOT}/app
 
-CMD [ "app.lambda_handler" ]
+CMD [ "app.lambda_transform" ]
