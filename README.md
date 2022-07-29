@@ -1,6 +1,15 @@
 # Mastering AWS Lambda Functions
 End to End Pipeline using AWS Services such as s3, boto3, lambda, ECR, step functions, Dynamodb, Step Functions, etc. This repository is related to our course in different platforms such as Udemy and ITVersity.
 
+Here are the comprehensive courses on Data Engineering using AWS Data Analytics on Udemy as well as our LMS. Our Guided Program is a comprehensive bundle which include all relevant courses related to Data Engineering using AWS Data Analytics.
+
+|Course Title|Udemy Link|Guided Program Link|
+|---|---|---|
+|AWS Essentials for Data Engineers|Self Support(TBA)|[Guided Program on AWS Data Analytics Services](https://itversity.com/bundle/data-engineering-using-aws-analytics)|
+|Mastering AWS Lambda Functions for Data Engineers|[Self Support](https://www.udemy.com/course/mastering-aws-lambda-functions/?referralCode=3F0E4F315A5CABE89702)|[Guided Program on AWS Data Analytics Services](https://itversity.com/bundle/data-engineering-using-aws-analytics)|
+|Mastering AWS Elastic Map Reduce for Data Engineers|[Self Support](https://www.udemy.com/course/mastering-aws-elastic-map-reduce-for-data-engineers/?referralCode=7B1DD34B3999E0A4BFF4)|[Guided Program on AWS Data Analytics Services](https://itversity.com/bundle/data-engineering-using-aws-analytics)|
+|Mastering Amazon Redshift and Serverless for Data Engineers|[Self Support](https://www.udemy.com/course/mastering-amazon-redshift-and-serverless-for-data-engineers/?referralCode=B217ECEFED78F7CF9734)|[Guided Program on AWS Data Analytics Services](https://itversity.com/bundle/data-engineering-using-aws-analytics)|
+
 Here are the instructions to setup this repository while taking the course:
 * Clone this repository
 * Use Notebooks to explore APIs and Core logic. All the notebooks are available under folder called as Notebooks.
