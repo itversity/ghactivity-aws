@@ -1,4 +1,4 @@
-# Mastering AWS Lambda Functions
+# Mastering AWS Lambda Functions for Data Engineers
 End to End Pipeline using AWS Services such as s3, boto3, lambda, ECR, step functions, Dynamodb, Step Functions, etc. This repository is related to our course in different platforms such as Udemy and ITVersity.
 
 Here are the comprehensive courses on Data Engineering using AWS Data Analytics on Udemy as well as our LMS. Our Guided Program is a comprehensive bundle which include all relevant courses related to Data Engineering using AWS Data Analytics.
